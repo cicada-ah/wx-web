@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-search": "../../vant-UI/search/index",
+    "van-button": "../../vant-UI/button/index",
+"van-area": "../../vant-UI/area/index",
+  "van-action-sheet": "../../vant-UI/action-sheet/index",
+  "van-icon": "../../vant-UI/icon/index",
+  "van-popup": "../../vant-UI/popup/index",
+    "van-tab": "../../vant-UI/tab/index",
+    "van-tabs": "../../vant-UI/tabs/index",
+    "van-loading": "../../vant-UI/loading/index"
+    }
+}

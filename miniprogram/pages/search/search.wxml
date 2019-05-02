@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<view class="search" style='height:{{navH}}px'>
+  <view class="search-top">
+    <view class="nav">
+      <view class="return" bindtap="handleReturn">
+      <image src="../../images/icon/return.png"></image>
+      </view>
+      <view class="return return-home" bindtap="handleReturn">
+      <image src="../../images/icon/home_o.png"></image>
+      </view>      
+    </view>
+    <view class="search-title">搜索</view>
+  </view>
+</view>
+<van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" />
+<view class="search-h">
+  <view class="search-h-title">
+  历史记录
+  </view>
+  <view class="search-h-title search-h-title-r">
+  清除
+  </view>
+</view>
+<view class="search-bottom">
+  <view class="search-content">
+    <view class="search-content-title">热门搜索</view>
+    <view class="search-content-body">
+<van-button custom-class="search-content-body-button" plain round size="mini">美食</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">西安美食</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">酒店</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">美食美食</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">美食美食</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">美食美食美食美食</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">美食美食美食美</van-button>
+<van-button custom-class="search-content-body-button" plain round size="mini">美食美食美食美</van-button>
+    </view>
+  </view>
+</view>

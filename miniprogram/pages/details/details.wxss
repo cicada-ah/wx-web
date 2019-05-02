@@ -1,0 +1,110 @@
+/* miniprogram/pages/details/details.wxss */
+.search{
+  display: flex;
+  position: relative;
+}
+.search-top{
+   display: flex;
+  align-items:center;   
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav{
+  border: 1px solid gainsboro;
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 25rpx;
+  margin-left: 25rpx;
+  padding: 6rpx 20rpx 6rpx 20rpx;
+  display: flex;
+  align-content: center;
+}
+.return {
+  display: flex;
+  width: 60rpx;
+}
+.return-home {
+  width: 45rpx;
+  padding-left: 15rpx;
+  border-left: 1rpx solid gainsboro;
+}
+.return image {
+  width: 60rpx;
+  height: 50rpx;
+}
+.search-title {
+  position: absolute;
+  left: calc(50% - 37rpx);
+  line-height: 45px;
+  text-align: center;  
+  font-family:PingFang-SC-Medium;
+  font-size:36rpx;
+  letter-spacing:2px;  
+}
+.contTop {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+.top-view {
+  width: 93%;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+.cont-top-time {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  margin-left: 18rpx;
+}
+.cont-top-time text:first-child {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.7)
+}
+.cont-top-time text:last-child {
+  font-size: 20rpx;
+  color: rgba(0, 0, 0, 0.3)
+}
+.cont-top-gz {
+  position: absolute;
+  top: 10rpx;
+  right: 0rpx;
+  border: 1rpx solid orange;
+  height: 40rpx;
+  width: 100rpx;
+  border-radius: 30rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: orange;
+}
+.top-dec {
+  width: 93%;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.top-text-dec {
+  color: red;
+  font-size: 32rpx;
+}
+.top-loc {
+  font-size: 28rpx;
+  color: rgba(93, 199, 241, 0.767)
+}
+.top-zan {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  
+}

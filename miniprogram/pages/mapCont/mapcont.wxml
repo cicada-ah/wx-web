@@ -1,0 +1,16 @@
+<!--miniprogram/pages/mapCont/mapcont.wxml-->
+<view class='nav bg-white' style='height:{{navH}}px'>
+  <view class='nav-title'>
+    数据中心
+  </view>
+</view>
+<van-tabs line-width="20" color="orange" swipe-threshold="3" animated>
+  <van-tab title="美景城市top5">
+  <view class="container">
+<ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+</view></van-tab>
+  <van-tab title="美食城市top5">内容 2</van-tab>
+  <van-tab title="城市热度">内容 3</van-tab>
+  <van-tab title="分享排行">内容 3</van-tab>
+  <van-tab title="个人关注">内容 3</van-tab>  
+</van-tabs>

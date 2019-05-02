@@ -1,0 +1,210 @@
+<!--miniprogram/pages/self/self.wxml-->
+<view>
+  <van-popup show="{{ show }}" custom-style="popup-cont" ><view class="popup-cont">
+    <image src="../../images/welcome.jpg" style="width: 100%; height: 250rpx;"></image>
+    <view class="text1">分享你身边的美</view>
+    <view class="text2">balalbala~</view>
+    <van-button type="danger" open-type="getUserInfo" bind:getuserinfo="onGotUserInfo"
+    custom-class="pop-button">点击go</van-button>
+  </view></van-popup>
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      我的
+    </view>
+  </view>
+  <view class="cont-top">
+    <view class="self-info">
+      <image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" style="width:225rpx; height: 150rpx; border-radius: 150rpx; overflow:hidden;margin-right: 75rpx;"></image>
+      <image wx:else src="../../images/icon/search.png" style="width:225rpx; height: 150rpx; border-radius: 150rpx; overflow:hidden;margin-right: 75rpx;"></image>
+      <view class="info-right">
+        <view class="info-right-top">
+          <text>0</text>
+          <text>0</text>
+          <text>0</text>
+        </view>
+        <view class="info-right-top">
+          <text>获赞</text>
+          <text>关注</text>
+          <text>粉丝</text>
+        </view>
+        <view class="info-right-bottom">
+        点击设置个签~
+        </view>
+      </view>
+    </view>
+    <view class="self-name">
+      <text>{{userInfo? userInfo.nickName : 'name'}}</text>
+      <image style="width: 60rpx; height: 60rpx;" src="../../images/icon/nan.png" />
+    </view>
+  </view>
+  <view class="cont-bot">
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="过去足迹">  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+    <view class='container'>
+      <view class="col col-left">
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 300rpx;" src="http://p0.meituan.net/hotel/715d7ebb8362777e343c389b09d55a5f611403.png@220w_125h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">2019年，唐代芙蓉园新年元宵节将重点放在以“灯光芙蓉夜与人类团圆”为主题的中国</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p0.meituan.net/mmc/89bec9d64cde38d441cf976f751c482e3788.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>
+        </view>
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 250rpx;" src="http://p0.meituan.net/travel/e48bf260c624b49bc0ddb369815e123e401028.png@660w_500h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">去之前不以为意，来之后后悔没买中间区~舞蹈舞台效果都很棒~通过各种手法达到了电影般的场景切换，很值了！晚上天气很冷，一些场景演员要在没脚踝</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p0.meituan.net/mmc/89bec9d64cde38d441cf976f751c482e3788.png@60w_60h_1e_1c"></image>
+                <view>可可乐rr</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>
+        </view>        
+      </view>
+      <view class="col col-right">
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 200rpx;" src="http://p0.meituan.net/travel/8bf0314aeef563ddddcd9b2065f7b351248816.jpg@220w_125h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">balbalbablalbablal~</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 270rpx;" src="http://p0.meituan.net/hotel/ff32e0b3b84c1b2687ed72b75d42173f5582826.jpg@660w_500h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">地方还不错，就在白鹿原，整体还行，有舞狮表演挺精彩的，小吃什么的大同小异，没什么特色，价格倒是不贵，适合周末家人去放松一下。 另外推荐看一</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>          
+        </view>
+      </view>
+    </view>
+  </scroll-view></van-tab>
+    <van-tab title="balabala~">
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+    <view class='container'>
+      <view class="col col-left">
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 300rpx;" src="http://p0.meituan.net/hotel/715d7ebb8362777e343c389b09d55a5f611403.png@220w_125h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">2019年，唐代芙蓉园新年元宵节将重点放在以“灯光芙蓉夜与人类团圆”为主题的中国</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p0.meituan.net/mmc/89bec9d64cde38d441cf976f751c482e3788.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>
+        </view>
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 250rpx;" src="http://p0.meituan.net/travel/e48bf260c624b49bc0ddb369815e123e401028.png@660w_500h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">去之前不以为意，来之后后悔没买中间区~舞蹈舞台效果都很棒~通过各种手法达到了电影般的场景切换，很值了！晚上天气很冷，一些场景演员要在没脚踝</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p0.meituan.net/mmc/89bec9d64cde38d441cf976f751c482e3788.png@60w_60h_1e_1c"></image>
+                <view>可可乐rr</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>
+        </view>        
+      </view>
+      <view class="col col-right">
+        <view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 200rpx;" src="http://p0.meituan.net/travel/8bf0314aeef563ddddcd9b2065f7b351248816.jpg@220w_125h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">balbalbablalbablal~</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">18</view>
+            </view>
+          </view>
+          <view class="notes-item">
+            <image style="width: 100%; height: 270rpx;" src="http://p0.meituan.net/hotel/ff32e0b3b84c1b2687ed72b75d42173f5582826.jpg@660w_500h_1e_1c">
+            </image>
+            <view class="item-inc">
+              <view class="item-inc-title">地方还不错，就在白鹿原，整体还行，有舞狮表演挺精彩的，小吃什么的大同小异，没什么特色，价格倒是不贵，适合周末家人去放松一下。 另外推荐看一</view>
+            </view>
+            <view class="item-inc-info">
+              <view class="item-inc-info-med">
+                <image src="http://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png@60w_60h_1e_1c"></image>
+                <view>sakura·</view>
+            </view>
+                        <view class="item-inc-like">
+            <van-icon name="like-o" />
+            </view>
+            <view class="item-inc-zan">15</view>
+            </view>
+          </view>          
+        </view>
+      </view>
+    </view>
+  </scroll-view>    
+    </van-tab>
+  </van-tabs>    
+  </view>
+</view>

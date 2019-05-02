@@ -1,0 +1,6 @@
+{
+"usingComponents": {
+  "van-search": "../../vant-UI/search/index",
+  "van-button": "../../vant-UI/button/index"
+}
+}

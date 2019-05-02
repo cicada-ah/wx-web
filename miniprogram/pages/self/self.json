@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-icon": "../../vant-UI/icon/index",
+    "van-tab": "../../vant-UI/tab/index",
+    "van-tabs": "../../vant-UI/tabs/index",
+    "van-button": "../../vant-UI/button/index",
+    "van-popup": "../../vant-UI/popup/index"
+  }
+}

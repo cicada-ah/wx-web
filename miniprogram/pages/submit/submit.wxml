@@ -1,0 +1,37 @@
+<!--miniprogram/pages/submit/submit.wxml-->
+<view>
+  <van-popup show="{{ show }}" custom-style="popup-cont" ><view class="popup-cont">
+    <image src="../../images/welcome.jpg" style="width: 100%; height: 250rpx;"></image>
+    <view class="text1">分享你身边的美</view>
+    <view class="text2">balalbala~</view>
+    <van-button type="danger" open-type="getUserInfo" bind:getuserinfo="onGotUserInfo"
+    custom-class="pop-button">点击go</van-button>
+  </view></van-popup>
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      发布
+    </view>
+  </view>
+  <view class="cont-top">
+    <textarea maxlength="999" placeholder="记录分享，美好留在此时此地..." placeholder-class="placeholder-class" bindinput="bindTextinput">    </textarea>
+    <van-button custom-class="cont-top-button" plain round size="mini"><text class="first">@</text>话题</van-button>
+    <van-button custom-class="cont-top-button" plain round size="mini"><text>#</text>推荐       </van-button>
+    <text class="cont-top-cont">{{textCount}}/2333</text>
+    <scroll-view scroll-x class="image-view">
+      <view class="camera" wx:for="{{imageItems}}" wx:for-index="idx" wx:key="idx" wx:for-item="imageItem"><image src="{{imageItem.path}}" style='width:100%; height:100%;'></image></view>   
+    </scroll-view>
+    <view class="camera2" bindtap='openCamera'>+</view>
+    <van-rate
+      value="{{ value }}"
+      size="{{ 25 }}"
+      count="{{ 6 }}"
+      color="#07c160"
+      void-color="#ceefe8"
+      bind:change="onChange"
+    />    
+    <van-button plain round type="warning" size="mini">提交</van-button>
+  </view>
+  <view class="cont-bottom">
+    <view class="bottom-dir" bindtap='getLocation'><view><van-icon name="location" /><text class="bottom-add">{{address}}</text></view><van-icon name="arrow" /></view>
+  </view>
+</view>

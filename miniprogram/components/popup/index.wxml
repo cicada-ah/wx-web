@@ -1,0 +1,15 @@
+<!--components/popup/index.wxml-->
+<view 
+wx:if="{{ show }}"
+class="page-overlay"
+bindtap="onClick"
+style="z-index: {{ zIndex }}; {{ mask ? 'background-color: rgba(0, 0, 0, .7);' : '' }}; {{ customStyle }}"
+>
+</view>
+<view
+wx:if="{{ show }}"
+style="z-index: {{ zIndex }}"
+class="page-modal"
+>
+  <slot></slot>
+</view>

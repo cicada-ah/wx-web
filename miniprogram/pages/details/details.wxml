@@ -1,0 +1,52 @@
+<!--miniprogram/pages/details/details.wxml-->
+<view class="search" style='height:{{navH}}px'>
+  <view class="search-top">
+    <view class="nav">
+      <view class="return" bindtap="handleReturn">
+      <image src="../../images/icon/return.png"></image>
+      </view>
+      <view class="return return-home" bindtap="handleReturn">
+      <image src="../../images/icon/home_o.png"></image>
+      </view>      
+    </view>
+    <view class="search-title">详情</view>
+  </view>
+</view>
+<my-swiper source="{{source}}" direction="left" delay="{{3000}}" bind:touch="touch"></my-swiper>
+<view class="contTop">
+  <view class="top-view top-info">
+    <image style="  width: 80rpx;height: 80rpx;border-radius: 50%;" src="https://p0.meituan.net/userheadpicbackend/f7b3c697c20f7f504b9b525c491cde2279110.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D0"></image>
+    <view class="cont-top-time">
+      <text>sakura·</text>
+      <text>2019-04-05 23:33:33</text>
+    </view>
+    <view class="cont-top-gz" bindtap="switchGz" style="border-color:{{bdColor}};color:{{bdColor}}">{{guanzhu}}</view>
+  </view>
+  <view class="top-view top-dec">
+  <text class="top-text-dec">#大唐芙蓉园#  </text> 
+芙蓉园也叫芙蓉苑,是隋朝和唐朝的皇...
+  </view>
+  <view class="top-view top-loc" bindtap='ongetLocation'>
+    <van-icon size="14px" name="location" color="rgba(93, 199, 241, 0.767)" /> 大唐芙蓉园
+  </view>
+  <view class="top-view top-zan">
+    <view>
+      <van-icon name="share" size="15px"/>  1
+    </view>
+    <view>
+    <van-icon name="more-o" size="15px"/>  0
+    <van-icon name="like-o" size="15px"/>  15
+    </view>
+  </view>
+  <view class="top-view top-pl">
+    <image style="  width: 80rpx;height: 80rpx;border-radius: 50%;" src="https://p0.meituan.net/userheadpicbackend/f7b3c697c20f7f504b9b525c491cde2279110.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D0"></image>  
+    <van-search
+  value="{{ value }}"
+  placeholder="快写下评论吧QAQ"
+  use-action-slot
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onSearch" style='color:rgba(93, 199, 241, 0.767)'>评论</view>
+</van-search>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {"my-swiper": "../My-swiper/my-swiper",
+  "van-icon": "../../vant-UI/icon/index",
+  "van-search": "../../vant-UI/search/index"
+  }
+}

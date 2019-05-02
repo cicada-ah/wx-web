@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-tab": "../../vant-UI/tab/index",
+    "van-tabs": "../../vant-UI/tabs/index",    
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

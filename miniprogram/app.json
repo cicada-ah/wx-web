@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/submit/submit",
+    "pages/self/self",
+    "pages/citycont/citycont",
+    "pages/mapCont/mapcont",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "gis",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取当前位置"
+    }
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#39b5de",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/home_h.png",
+        "selectedIconPath": "images/icon/home_o.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个性化地图",
+        "iconPath": "images/icon/medal_h.png",
+        "selectedIconPath": "images/icon/medal_o.png"
+      },
+      {
+        "pagePath": "pages/submit/submit",
+        "text": "发布",
+        "iconPath": "images/icon/icon_subm_h.png",
+        "selectedIconPath": "images/icon/icon_subm_o.png"
+      },
+      {
+        "pagePath": "pages/mapCont/mapcont",
+        "text": "数据中心",
+        "iconPath": "images/icon/map.png",
+        "selectedIconPath": "images/icon/map_h.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "我的",
+        "iconPath": "images/icon/people_h.png",
+        "selectedIconPath": "images/icon/people_o.png"
+      }
+    ]
+  }
+}

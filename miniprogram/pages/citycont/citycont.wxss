@@ -1,0 +1,166 @@
+/* miniprogram/pages/citycont/citycont.wxss */
+.search{
+  display: flex;
+  position: relative;
+}
+.search-top{
+   display: flex;
+  align-items:center;   
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav{
+  border: 1px solid gainsboro;
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 25rpx;
+  margin-left: 25rpx;
+  padding: 6rpx 20rpx 6rpx 20rpx;
+  display: flex;
+  align-content: center;
+}
+.return {
+  display: flex;
+  width: 60rpx;
+}
+.return-home {
+  width: 45rpx;
+  padding-left: 15rpx;
+  border-left: 1rpx solid gainsboro;
+}
+.return image {
+  width: 60rpx;
+  height: 50rpx;
+}
+.search-title {
+  position: absolute;
+  left: calc(50% - 37rpx);
+  line-height: 45px;
+  text-align: center;  
+  font-family:PingFang-SC-Medium;
+  font-size:36rpx;
+  letter-spacing:2px;  
+}
+
+.bg-gray{
+  background-color: #f7f7f7;
+}
+.overflow{
+  overflow: auto;
+}
+.hidden{
+  overflow: hidden;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 15rpx;
+}
+
+.search_input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50rpx;
+  background-color: #F5F5F5;
+  width: 90%;
+}
+
+.search_input image {
+  height: 45rpx;
+  width: 45rpx;
+  align-self: center;
+  padding-left: 30rpx;
+}
+
+.search_input input {
+  height: 70rpx;
+  padding-left: 10rpx;
+}
+.container {
+  padding:0 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col {
+  display: inline-block;
+  width: 49.2%;
+  height: 100vh;
+}
+.notes-item {
+  width: 100%;
+  margin-top: 2vw;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3rpx 3rpx 2rpx rgba(0, 0, 0, .1);
+}
+.item-inc {
+  width: 88%;
+  margin:0rpx auto;
+  text-align: left;
+}
+.item-inc-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin: 20rpx 0;
+  font-size: 26rpx;
+  line-height: 1.5;
+  font-family: SimHei;
+  font-weight: 200;  
+}
+.item-inc-info {
+  display: flex;
+  position: relative;
+  height: 50rpx;
+  margin: 20rpx 10rpx;
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 100;
+  color: #4D4D4D;
+}
+.item-inc-info-med {
+  display: flex;
+  text-align: center;
+  line-height: 50rpx;
+}
+.item-inc-info-med view {
+  margin-left: 10rpx;
+}
+.item-inc-info-med image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.item-inc-zan {
+  position: absolute;
+  right: 0;
+  line-height: 50rpx;
+  text-align: center;
+}
+.loading {
+ position: absolute!important;
+ top: 450rpx!important;
+ left: 345rpx!important;
+}
+.item-inc-like {
+  position: absolute;
+  right: 50rpx;
+  line-height: 60rpx;
+  text-align: center;  
+}
